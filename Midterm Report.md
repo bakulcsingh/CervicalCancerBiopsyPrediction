@@ -1,11 +1,10 @@
-**Midterm report**
+# Midterm report
 
 **Description of Data**
 
 The dataset we used originally had 36 features and 858 examples of patients. 25 of the features are categorical (binary) whereas the remaining have discrete data regarding the patient. The main behavioral indicators (based on our research and a few interviews with doctors) of cervical cancer that the dataset covers are the number of pregnancies, contraceptive use, sexually transmitted diseases (STDs), smoking history, intra-uterine disease history and hinselmann test that are used by medical practitioners to recommend a biopsy. Our dataset contains a column titled Biopsy, whose value tells us whether a biopsy was recommended for this patient or not. Our goal is to predict the value of this field for new patients, since a biopsy in an expensive and an invasive procedure. Since biopsies are only recommended in cases when cancer is strongly suspected, we plan on using features which are commonly considered risk factors for Cervical Cancer to decide whether to recommend a biopsy or not.
 
-We have included a few visualisations and some descriptive statistics to better understand the dataset below.
-
+We have included a few visualisations and some descriptive statistics to better understand the dataset in the repository.
 Most of the women in the dataset are under the age of 40 and the average age is a little less than 27.
 
 The average number of sexual partners that the women in the dataset have had are 2 and they range from 1 to 14. The range seems large but 97% of the women have had 6 or less partners.The average number of pregnancies in our dataset are 2 and they vary from 0 to 11. About half of the women in the dataset have had more between 2 and 4 pregnancies.
