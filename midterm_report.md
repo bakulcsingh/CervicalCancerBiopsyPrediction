@@ -27,7 +27,7 @@ However we plan to engineer new features based on the weights each has been assi
 
 **Data Cleaning**
 
-The dataset had ‘?’ for a lot of women across attributes. We could ignore these datapoints because our dataset was not very large to start with. Moreover the rows of entries for which biopsies were recommended were already very less and we could not remove any of these. 
+The dataset had ‘?’ for a lot of women across attributes. We could not ignore these datapoints because our dataset was not very large to start with. Moreover the rows of entries for which biopsies were recommended were already very less and we could not remove any of these. 
 
 We managed to clean the data by replacing the ‘?’ with values that would result in the least bias during classification and be consistent with the labels. For example: in the number of pregnancies we divided the incorrect entries into two categories one for women who were recommended a biopsy and one for those who were not. For either of these we replaces them with the most commonly occurring entry for the classification in the remaining data. This ensured that despite having changed the entry in the field the outcome would not be affected.
 
