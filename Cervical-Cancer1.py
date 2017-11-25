@@ -1,4 +1,5 @@
 
+
 # coding: utf-8
 
 # In[11]:
@@ -130,11 +131,24 @@ selector_lsvc.fit(X_train,y_train)
 lsvc_features = selector_lsvc.support_
 
 from sklearn.feature_selection import RFE
-selector_log_rfe = RFE(estimator_log)
-selector_log_rfe = selector_log_rfe.fit(X_train,y_train)
+selector_log_rfe = RFE(estimator_log,n_features_to_select=10)
+selector_log_rfe.fit(X_train,y_train)
 log_rfe_num_feat = selector_log_rfe.n_features_
 log_rfe_feat = selector_log_rfe.support_
 log_rfe_rank_feat = selector_log_rfe.ranking_
+log_rfe_feat_and_rank = np.stack((log_rfe_feat,log_rfe_rank_feat))
+
+selector_lsvc_rfe = RFE(estimator_lsvc,n_features_to_select=10)
+selector_lsvc_rfe.fit(X_train,y_train)
+lsvc_rfe_num_feat = selector_lsvc_rfe.n_features_
+lsvc_rfe_feat = selector_lsvc_rfe.support_
+lsvc_rfe_rank_feat = selector_lsvc_rfe.ranking_
+
+selector_percept_rfe = RFE(estimator_perceptron,n_features_to_select=10)
+selector_percept_rfe.fit(X_train,y_train)
+percept_rfe_num_feat = selector_percept_rfe.n_features_
+percept_rfe_feat = selector_percept_rfe.support_
+percept_rfe_rank_feat = selector_percept_rfe.ranking_
 
 # In[ ]:
 
